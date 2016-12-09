@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans", Helvetica, Arial, serif;
+  background-color: #e7e7e7;
+  padding: 10px;
+}
+
+.heading {
+  color: #057;
+  font-size: 175%;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: -1px -1px 5px #fff, 1px 1px 5px #666;
+}
+
+section {
+  position: relative;
+  float: left;
+  background-color: #ddd;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px #777;
+  padding: 10px;
+}
+
+#section1 {
+  background-color: #def;
+}
+
+#section2 {
+  background-color: #fdd;
+}
+
+#section3 {
+  background-color: #ffd;
+}
+
+p {
+  position: relative;
+  clear: both;
+  color: #333;
+  text-align: justify;
+  text-indent: 50px;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+.title {
+  position: relative;
+  float: right;
+  font-size: 125%;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 0 4px 0 24px;
+  box-shadow: inset -3px -3px 7px #000, inset 3px 3px 7px #fff;
+  padding: 5px 25px 5px 30px;
+  top: -11px;
+  right: -11px;
+}
+
+#title1 {
+  background-color: #89d;
+}
+
+#title2 {
+  background-color: #d77;
+}
+
+#title3 {
+  background-color: #da8;
+}
+
+@media (min-width: 992px) {
+  section {
+    width: 32%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section {
+    width: 48%;
+  }
+
+}
+
+@media (max-width: 767px) {
+  section {
+    width: 100%;
+  }
+}
