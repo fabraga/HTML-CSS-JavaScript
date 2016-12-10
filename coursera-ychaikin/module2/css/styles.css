@@ -96,10 +96,6 @@ p {
   section {
     width: 48%;
   }
-  #section3 {
-    width: 97.3%;
-  }
-
 }
 
 @media (max-width: 767px) {
