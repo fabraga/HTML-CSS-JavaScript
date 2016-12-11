@@ -3,7 +3,10 @@
 }
 
 body {
+  position: relative;
+
   font-family: "Comic Sans", Helvetica, Arial, serif;
+  font-size: 16px;
   background-color: #e7e7e7;
   padding: 10px;
 }
@@ -18,28 +21,35 @@ body {
   text-shadow: -1px -1px 5px #fff, 1px 1px 5px #666;
 }
 
-/*.sections {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 5px;
-  text-align: center;
-  background-color: #057;
-}*/
+.sections {
+  position: absolute;
+  margin: auto;
+  top: 80px;
+  left: 0; right: 0;
 
-section {
-  position: relative;
+  display: inline-block;
+
+  width: 90%;
+  /*background-color: #057;*/
+  padding: 5px;
+}
+
+.section {
   float: left;
-  background-color: #ddd;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 4px;
-  box-shadow: inset 0 0 10px #333; box-shadow: 5px 5px 10px #777;
   padding: 10px;
 }
 
+section {
+  position: relative;
+  width: 100%;
+  background-color: #ddd;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px #333; box-shadow: 5px 5px 10px #777;
+}
+
 #section1 {
-  background-color: #def;
+  background-color: #cdf;
 }
 
 #section2 {
@@ -56,11 +66,11 @@ p {
   color: #333;
   text-align: justify;
   text-indent: 50px;
-  margin-bottom: 2px;
-  padding: 5px;
+  margin: 5px;
+  padding: 10px;
 }
 
-.title {
+.section-title {
   position: relative;
   float: right;
   font-size: 125%;
@@ -70,12 +80,12 @@ p {
   border-radius: 0 4px 0 24px;
   box-shadow: inset -3px -3px 7px #000, inset 3px 3px 7px #fff;
   padding: 5px 25px 5px 30px;
-  top: -11px;
-  right: -11px;
+  top: -1px;
+  right: -1px;
 }
 
 #title1 {
-  background-color: #89d;
+  background-color: #78c;
 }
 
 #title2 {
@@ -83,27 +93,23 @@ p {
 }
 
 #title3 {
-  background-color: #da8;
+  background-color: #b86;
 }
 
 @media (min-width: 992px) {
-  section {
-    width: 32%;
+  .col-lg-4 {
+    width: 33.33%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  section {
-    width: 48%;
+  .col-md-6 {
+    width: 50%;
   }
-  #section3 {
-    width: 97.3%;
-  }
-
 }
 
 @media (max-width: 767px) {
-  section {
+  .col-sm-12 {
     width: 100%;
   }
 }
