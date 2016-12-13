@@ -1,11 +1,114 @@
 body {
   font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  background-color: #831;
+  color: #fff;
 }
 
-@media (min-width: 992px) {
-  .col-lg-4 {
-    width: 33.33%;
+.container-fluid {
+  /*width: 95%;*/
+}
+
+#header-nav {
+  background-color: #e95;
+  border-radius: 0;
+  border: 0;
+}
+
+#logo-img {
+  background: url('../img/rest-logo_120x150.png') no-repeat;
+  width: 120px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Lora', serif;
+  color: #720;
+  font-size: 1.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+.navbar-brand h1:hover {
+  color: #fd9;
+  text-shadow: 1px 1px 10px #000;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p { /* common cert */
+  color: #000;
+  text-transform: uppercase;;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #720;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #fc9;
+  color: #c20;
+}
+#nav-list a span {
+  font-size: 1.5em;
+}
+
+#phone {
+  margin-top: 5px;
+}
+#phone a { /* Phone number */
+  text-align: right;
+  font-size: 0.9em;
+  padding: 10px 10px 5px 10px;
+}
+#phone div { /* We deliver */
+  color: #462;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #831;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+    background: url('../img/rest-logo_80x100.png') no-repeat;
+    width: 80px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
   }
+  /* End Header */
+
   /*.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
     padding: 10px;
@@ -24,18 +127,8 @@ body {
   .col-lg-12 { width: 100%; }*/
 }
 
-/*@media (min-width: 768px) and (max-width: 991px) {
-  section {
-    width: 48%;
-  }
-  #section3 {
-    width: 97.3%;
-  }
-}*/
+/********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  .col-md-6 {
-    width: 50%;
-  }
   /*.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
     padding: 10px;
@@ -54,15 +147,33 @@ body {
   .col-md-12 { width: 100%; }*/
 }
 
-/*@media (max-width: 767px) {
-  section {
-    width: 100%;
-  }
-}*/
+/********** Extra small devices only **********/
 @media (max-width: 767px) {
-  .col-sm-12 {
-    width: 100%;
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
   }
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand p { /* common cert */
+    font-size: .6em;
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /* Star-K */
+    height: 20px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu glyph */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span {
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
   /*.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
     padding: 10px;
