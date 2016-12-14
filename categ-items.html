@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    <title>HTML/CSS/JavaScript Solutions</title>
+  </head>
+  <body>
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
+        <!-- <div class="container-fluid"> -->
+        <div class="container">
+          <div class="navbar-header">
+            <a href="#" class="pull-left visible-md visible-lg">
+              <div id="logo-img" alt="Logo image" class=""></div>
+            </a>
+            <div class="navbar-brand">
+              <a href="#">
+                <h1>Ciclano's Restaurant</h1>
+              </a>
+              <div>
+                <img src="img/certified_30x25.png" alt="[certification]" />
+                <!-- <span class="glyphicon glyphicon-certificate"></span> -->
+                <!-- <span class="glyphicon glyphicon-star"></span> -->
+                <p>Certified</p>
+              </div>
+            </div>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div id="collapsable-nav" class="collapse navbar-collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <li class="visible-xs">
+                <a href="index.html">
+                  <span class="glyphicon glyphicon-home"></span> Home
+                </a>
+              </li>
+              <li class="active">
+                <a href="menu-categs.html">
+                  <span class="glyphicon glyphicon-cutlery"></span>
+                  <br class="hidden-xs"> Menu</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-info-sign"></span>
+                  <br class="hidden-xs"> About</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-certificate"></span>
+                  <br class="hidden-xs"> Awards</a>
+              </li>
+              <li id="phone" class="hidden-sx">
+                <a href="tel:000-000-0000">
+                  <span>000-000-0000</span>
+                  <div>delivery: 10h-19h</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div id="call-btn" class="visible-xs">
+      <a class="btn" href="tel:000-000-0000">
+        <span class="glyphicon glyphicon-earphone"></span>
+        000-000-0000
+      </a>
+      <div id="xs-deliver" class="text-center visible-xs">
+        Delivery: 10-19h
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="container-fluid">
+      <h2 id="menu-categs-title" class="text-center">Lunch Menu</h2>
+      <div class="text-center">Lunch not served till 1pm.</div>
+
+      <section class="row">
+        <div class="menu-item-tile col-md-6">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="menu-item-photo">
+                <div>D01</div>
+                <img class="img-responsive" width="250" height="150" src="img/menu/B/B-1.jpg" alt="Item" />
+              </div>
+              <div class="menu-item-price">10.95<span> (pint)</span> 14.95 <span>(quart)</span></div>
+            </div>
+            <div class="menu-item-description col-sm-7">
+              <h3 class="menu-item-title">Veal with mixed vegetables</h3>
+              <p class="menu-item-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio sit amet felis sodales gravida. Curabitur aliquet auctor risus, nec iaculis leo sodales sed. Vestibulum turpis mi, pretium ac nibh non, aliquam viverra ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio sit amet felis sodales gravida. Curabitur aliquet auctor risus, nec iaculis leo sodales sed. Vestibulum turpis mi, pretium ac nibh non, aliquam viverra ligula.
+              </p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+
+        <div class="menu-item-tile col-md-6">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="menu-item-photo">
+                <div>D02</div>
+                <img class="img-responsive" width="250" height="150" src="img/menu/B/B-1.jpg" alt="Item" />
+              </div>
+              <div class="menu-item-price">
+                €10.95 <span>(pint)</span> €14.95 <span>(quart)</span>
+              </div>
+            </div>
+            <div class="menu-item-description col-sm-7">
+              <h3 class="menu-item-title">Veal with mixed vegetables</h3>
+              <p class="menu-item-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio sit amet felis sodales gravida. Curabitur aliquet auctor risus, nec iaculis leo sodales sed. Vestibulum turpis mi, pretium ac nibh non, aliquam viverra ligula.
+              </p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+
+        <div class="clearfix visible-md-block visible-lg-block"></div>
+
+        <div class="menu-item-tile col-md-6">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="menu-item-photo">
+                <div>D03</div>
+                <img class="img-responsive" width="250" height="150" src="img/menu/B/B-1.jpg" alt="Item" />
+              </div>
+              <div class="menu-item-price">
+                €10.95 <span>(pint)</span> €14.95 <span>(quart)</span>
+              </div>
+            </div>
+            <div class="menu-item-description col-sm-7">
+              <h3 class="menu-item-title">Veal with mixed vegetables</h3>
+              <p class="menu-item-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio sit amet felis sodales gravida. Curabitur aliquet auctor risus, nec iaculis leo sodales sed. Vestibulum turpis mi, pretium ac nibh non, aliquam viverra ligula.
+              </p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+
+        <div class="menu-item-tile col-md-6">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="menu-item-photo">
+                <div>D04</div>
+                <img class="img-responsive" width="250" height="150" src="img/menu/B/B-1.jpg" alt="Item" />
+              </div>
+              <div class="menu-item-price">
+                €10.95 <span>(pint)</span> €14.95 <span>(quart)</span>
+              </div>
+            </div>
+            <div class="menu-item-description col-sm-7">
+              <h3 class="menu-item-title">Veal with mixed vegetables</h3>
+              <p class="menu-item-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio sit amet felis sodales gravida. Curabitur aliquet auctor risus, nec iaculis leo sodales sed. Vestibulum turpis mi, pretium ac nibh non, aliquam viverra ligula.
+              </p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+
+        <div class="clearfix visible-md-block visible-lg-block"></div>
+
+        <div class="menu-item-tile col-md-6">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="menu-item-photo">
+                <div>D05</div>
+                <img class="img-responsive" width="250" height="150" src="img/menu/B/B-1.jpg" alt="Item" />
+              </div>
+              <div class="menu-item-price">
+                €10.95 <span>(pint)</span> €14.95 <span>(quart)</span>
+              </div>
+            </div>
+            <div class="menu-item-description col-sm-7">
+              <h3 class="menu-item-title">Veal with mixed vegetables</h3>
+              <p class="menu-item-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio sit amet felis sodales gravida. Curabitur aliquet auctor risus, nec iaculis leo sodales sed. Vestibulum turpis mi, pretium ac nibh non, aliquam viverra ligula.
+              </p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+
+        <div class="menu-item-tile col-md-6">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="menu-item-photo">
+                <div>D06</div>
+                <img class="img-responsive" width="250" height="150" src="img/menu/B/B-1.jpg" alt="Item" />
+              </div>
+              <div class="menu-item-price">
+                €10.95 <span>(pint)</span> €14.95 <span>(quart)</span>
+              </div>
+            </div>
+            <div class="menu-item-description col-sm-7">
+              <h3 class="menu-item-title">Veal with mixed vegetables</h3>
+              <p class="menu-item-details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam odio sit amet felis sodales gravida. Curabitur aliquet auctor risus, nec iaculis leo sodales sed. Vestibulum turpis mi, pretium ac nibh non, aliquam viverra ligula.
+              </p>
+            </div>
+          </div>
+          <hr class="visible-xs">
+        </div>
+
+        <div class="clearfix visible-md-block visible-lg-block"></div>
+
+      </section>
+    </div> <!-- End of #main-content -->
+
+    <!-- FOOTER CONTENT -->
+    <footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <section id="hours" class="col-sm-4">
+            <span>Hours:</span><br>
+            Mon-Fri: 9am - 8pm<br>
+            Sat: 9am - 6:30pm<br>
+            Sun: 12 - 6pm<br>
+            <hr class="visible-xs">
+          </section>
+          <section id="address" class="col-sm-4">
+            <span>Address:</span><br>
+            34 Wexford St, Dublin 2<br>
+            <p>
+              * Delivery area within 3-4 miles, with minimum order of €20 plus €3 charge for all deliveries.
+            </p>
+            <hr class="visible-xs">
+          </section>
+          <section id="testimonials" class="col-sm-4">
+            <p>
+              "The best of Organic food I've been to! And that's saying a lot, since I've been to many!"
+            </p>
+            <p>
+              "Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"
+            </p>
+          </section>
+        </div>
+        <div class="text-center">
+          &copy; Copyright Ciclano's Dublin 2016
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
