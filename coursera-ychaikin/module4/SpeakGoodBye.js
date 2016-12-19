@@ -1,4 +1,4 @@
-(function () {
+(function (window) {
 
   var byeSpeaker = {};
 
@@ -34,4 +34,4 @@ var speakWord = "Good Bye";
 // 'byeSpeaker' on the global scope as well.
 // xxxx.xxxx = byeSpeaker;
 
-})();
+})(window);
