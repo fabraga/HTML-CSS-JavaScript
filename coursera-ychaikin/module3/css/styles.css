@@ -17,7 +17,7 @@ body {
 }
 
 .navbar-brand {
-  padding: 0;
+  padding: 0 5px;
   margin: 0;
 }
 
@@ -33,10 +33,14 @@ h1 {
   font-weight: bold;
 }
 
-#nav-list {
+.nav.navbar-nav {
+  margin: -2px -15px 0 -15px;
   background-color: #cde;
   border: solid 2px #000;
-  margin-top: 0px;
+  border-top: none;
+}
+#nav-list {
+  /*margin-top: 0px;*/
 }
 
 #nav-list li a {
