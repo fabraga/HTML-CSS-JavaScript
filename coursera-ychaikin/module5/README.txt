@@ -5,4 +5,4 @@ Coursera "HTML, CSS, and Javascript for Web Developers" (HTML/CSS/JavaScript)
 Teacher: Yaakov Chaikin (user: ychaikin)
 
 Assignment description:
-https://github.com/jhu-ep-coursera/fullstack-course5/blob/master/assignments/assignment3/Assignment-3.md
+https://github.com/jhu-ep-coursera/fullstack-course5/blob/master/assignments/assignment5/Assignment-5.md
