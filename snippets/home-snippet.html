@@ -1,0 +1,32 @@
+<!-- Home Jumbotron -->
+<div class="jumbotron">
+  <img src="img/jumbotron_768x300.jpg" alt="Restaurant's Photo" class="img-responsive visible-xs" />
+</div>
+<!-- Home tiles -->
+<!-- Tiles: Menu -->
+<div id="home-tiles" class="row">
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="#" onclick="$mc.loadMenuCategs();">
+      <div id="menu-tile">
+        <span>menu</span>
+      </div>
+    </a>
+  </div>
+  <!-- Tiles: Specials -->
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <a href="#" onclick="$mc.loadMenuItems('SP');">
+      <div id="specials-tile">
+        <span>specials</span>
+      </div>
+    </a>
+  </div>
+  <!-- Tiles: Map -->
+  <div class="col-md-4 col-sm-12 col-xs-12">
+    <a href="https://www.google.ie/maps/place/Evergreen/@53.3370708,-6.2658207,17z/data=!4m5!3m4!1s0x48670e9fd33331cf:0x59fbd245e984e8db!8m2!3d53.3370708!4d-6.2658207?hl=en" target="_blank">
+      <div id="map-tile">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.3455234874646!2d-6.265820700000013!3d53.33707080000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9fd33331cf%3A0x59fbd245e984e8db!2sEvergreen!5e0!3m2!1sen!2sie!4v1481653601180" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <span>map</span>
+      </div>
+    </a>
+  </div>
+</div> <!-- End of #home-tiles -->

@@ -227,7 +227,8 @@ header {
   margin-right: -15px;
 }
 .menu-item-tile .menu-item-price span {
-  font-size: .7em;
+  color: #bbb;
+  font-size: .8em;
 }
 .menu-item-photo {
   position: relative;
