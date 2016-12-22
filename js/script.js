@@ -17,24 +17,23 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...)
 
 (function (global) {
 
-  var mc = {};
+  var mainContent = {};
 
   var homeHtml = "snippets/home-snippet.html";
 
-  var allCategsUrl = "http://davids-restaurant.herokuapp.com/categories.json";
-  var categsTitleHtml = "snippets/categs-title-snippet.html";
+  var categoriesUrl = "http://davids-restaurant.herokuapp.com/categories.json";
 
-  var categHtml = "snippets/categs-snippet.html";
+  var categsTitleHtml = "snippets/categs-title-snippet.html";
+  var categHtml = "snippets/categ-snippet.html";
 
   var menuItemsUrl = "http://davids-restaurant.herokuapp.com/menu_items.json?category=";
-  var menuItemsTitleHtml = "snippets/menu-items-title.html";
 
-  var menuItemHtml = "snippets/menu-item.html";
+  var menuItemsTitleHtml = "snippets/menu-items-title-snippet.html";
+  var menuItemHtml = "snippets/menu-item-snippet.html";
 
   // Convenience function for inserting innerHTML for 'select'
   var insertHtml = function (selector, html) {
-    var targetElem = document.querySelector(selector);
-    targetElem.innerHTML = html;
+    document.querySelector(selector).innerHTML = html;
   };
 
   // Show loading icon inside element identified by 'selector'.
@@ -52,7 +51,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...)
     string = string.replace(new RegExp(propToReplace, "g"), propValue);
 
     return string;
-  }
+  };
 
   // Remove the class 'active' from home and switch to Menu button
   var switchMenuToActive = function () {
@@ -74,28 +73,28 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...)
 
     // On first load, show home view
     showLoading("#main");
-
     $ajaxUtils.sendGetRequest(homeHtml, function (responseText) {
       document.querySelector("#main").innerHTML = responseText;
     }, false);
   });
 
   // Load the menu categories view
-  mc.loadMenuCategs = function () {
+  mainContent.loadMenuCategs = function () {
     showLoading("#main");
-    $ajaxUtils.sendGetRequest(allCategsUrl, buildAndShowCategsHTML); // ", true);" is default to JSON
+    $ajaxUtils.sendGetRequest(categoriesUrl, buildAndShowCategsHtml);
+    // $ajaxUtils.sendGetRequest(categoriesUrl, buildAndShowCategsHtml, true); // default to JSON
   };
 
   // Load the menu categories view
   // 'categShort' is a short_name for a category
-  mc.loadMenuItems = function (categShort) {
+  mainContent.loadMenuItems = function (categShort) {
     showLoading("#main");
-    $ajaxUtils.sendGetRequest(menuItemsUrl + categShort, buildAndShowMenuItemsHTML); // ", true);" is default to JSON
+    $ajaxUtils.sendGetRequest(menuItemsUrl + categShort, buildAndShowMenuItemsHtml); // ", true);" is default to JSON
   };
 
   // Builds HTML for the categories page based on the data
   // from the server
-  function buildAndShowCategsHTML (categories) {
+  function buildAndShowCategsHtml (categories) {
     // Load title snippet of categories page
     $ajaxUtils.sendGetRequest(categsTitleHtml, function (categsTitleHtml) {
       // Retrieve single category snippet
@@ -134,11 +133,14 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...)
 
   // Builds HTML for the single category page based on the data
   // from the server
-  function buildAndShowMenuItemsHTML (categMenuItems) {
+  function buildAndShowMenuItemsHtml (categMenuItems) {
+
     // Load title snippet of menu items page
     $ajaxUtils.sendGetRequest(menuItemsTitleHtml, function (menuItemsTitleHtml) {
+
       // Retrieve single menu item snippet
       $ajaxUtils.sendGetRequest(menuItemHtml, function (menuItemHtml) {
+
         var menuItemsViewHtml = buildMenuItemsViewHtml(categMenuItems, menuItemsTitleHtml, menuItemHtml);
 
         insertHtml("#main", menuItemsViewHtml);
@@ -180,9 +182,9 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...)
 
       html = insertProperty(html, "description", menuItems[i].description);
 
-      // Add clearfix after every second menu item
+      // Add clearfix after every second menu item (every odd number in the array: 1,3,5,7...)
       if (i % 2 != 0) {
-        html += "<div class='clearfix visible-lg-block visible-md-block'></div>"
+        html += "<div class='clearfix visible-lg-block visible-md-block'></div>";
       }
 
       finalHtml += html;
@@ -218,6 +220,6 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...)
     return html;
   }
 
-  global.$mc = mc;
+  global.$mainContent = mainContent;
 
 })(window);
